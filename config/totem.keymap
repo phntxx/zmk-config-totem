@@ -79,9 +79,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &kp Q      &kp W        &kp E      &kp R      &kp T        &kp Z     &mt LBKT U    &kp I  &mt SEMI O  &kp P
-                &mt DQT A  &mt MINUS S  &kp D      &kp F      &kp G        &kp H     &kp J         &kp K  &kp L       &none
-&kp LEFT_SHIFT  &kp Y      &kp X        &kp C      &kp V      &kp B        &kp N     &kp M         &none  &none       &none  &none
+                &kp Q      &kp W        &kp E      &kp R      &kp T        &kp Z     &mt LBKT U    &kp I      &mt SEMI O  &kp P
+                &mt DQT A  &mt MINUS S  &kp D      &kp F      &kp G        &kp H     &kp J         &kp K      &kp L       &kp SEMI
+&kp LEFT_SHIFT  &kp Y      &kp X        &kp C      &kp V      &kp B        &kp N     &kp M         &kp COMMA  &kp DOT     &kp FSLH  &kp APOS
                                         &kp LCTRL  &lt 1 TAB  &kp SPACE    &kp BSPC  &kp LEFT_ALT  &mo 3
             >;
         };
