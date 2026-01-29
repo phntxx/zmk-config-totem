@@ -58,7 +58,7 @@
 
         COMBO_RETURN {
             bindings = <&kp RET>;
-            key-positions = <11 12 13>;
+            key-positions = <9 8>;
         };
     };
 
