@@ -55,6 +55,11 @@
             bindings = <&kp SPACE>;
             key-positions = <16 17 18>;
         };
+
+        COMBO_RETURN {
+            bindings = <&kp RET>;
+            key-positions = <11 12 13>;
+        };
     };
 
     keymap {
