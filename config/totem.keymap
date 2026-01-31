@@ -84,10 +84,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &kp Q               &kp W        &kp E      &kp R      &kp T        &kp Y     &mt LBKT U    &kp I           &mt SEMI O  &kp P
-                &mt SINGLE_QUOTE A  &mt MINUS S  &kp D      &kp F      &kp G        &kp H     &kp J         &kp K           &kp L       &kp SEMI
-&kp LEFT_SHIFT  &kp Z               &kp X        &kp C      &kp V      &kp B        &kp N     &kp M         &kp COMMA       &kp DOT     &kp FSLH  &kp APOS
-                                                 &kp LCTRL  &lt 1 TAB  &kp SPACE    &kp BSPC  &mt RALT RET  &lt 3 LEFT_GUI
+                &kp Q               &kp W        &kp E      &kp R      &kp T        &kp Y     &mt LBKT U         &kp I           &mt SEMI O  &kp P
+                &mt SINGLE_QUOTE A  &mt MINUS S  &kp D      &kp F      &kp G        &kp H     &kp J              &kp K           &kp L       &kp SEMI
+&kp LEFT_SHIFT  &kp Z               &kp X        &kp C      &kp V      &kp B        &kp N     &kp M              &kp COMMA       &kp DOT     &kp FSLH  &kp APOS
+                                                 &kp LCTRL  &lt 1 TAB  &kp SPACE    &kp BSPC  &mt RIGHT_ALT RET  &lt 3 LEFT_GUI
             >;
         };
 
@@ -110,10 +110,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp NUMBER_1   &kp N2  &kp N3  &kp N4  &kp N5    &kp N6    &kp N7    &kp N8  &kp N9     &kp N0
-        &kp GRAVE      &trans  &trans  &trans  &trans    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp EQUAL
-&trans  &kp BACKSLASH  &trans  &trans  &trans  &trans    &trans    &trans    &trans  &trans     &trans     &trans
-                               &trans  &trans  &trans    &kp DEL   &trans    &trans
+        &kp NUMBER_1   &kp N2  &kp N3  &kp N4  &kp N5    &kp N6    &kp N7     &kp N8     &kp N9     &kp N0
+        &kp GRAVE      &trans  &trans  &trans  &trans    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp EQUAL
+&trans  &kp BACKSLASH  &trans  &trans  &trans  &trans    &trans    &kp PG_DN  &kp PG_UP  &trans     &trans     &trans
+                               &trans  &trans  &trans    &kp DEL   &trans     &trans
             >;
         };
 
