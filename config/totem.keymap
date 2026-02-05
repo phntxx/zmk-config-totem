@@ -55,23 +55,6 @@
             key-positions = <37 31>;
             layers = <0 2 1>;
         };
-
-        combo_fun_out {
-            bindings = <&tog 0>;
-            key-positions = <37 31>;
-            layers = <3>;
-        };
-
-        combo_cfg_out {
-            bindings = <&tog 4>;
-            key-positions = <20 32>;
-            layers = <4>;
-        };
-
-        combo_def {
-            bindings = <&to 0>;
-            key-positions = <20 31>;
-        };
     };
 
     keymap {
@@ -153,10 +136,10 @@
 
         function_layer {
             bindings = <
-        &trans  &kp F1  &kp F2  &kp F3  &kp F10    &trans  &trans  &trans  &trans  &trans
-        &trans  &kp F4  &kp F5  &kp F6  &kp F11    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp F7  &kp F8  &kp F9  &kp F12    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans     &trans  &trans  &trans
+        &to 0   &kp F1  &kp F2  &kp F3  &kp F10      &trans    &trans  &trans  &trans  &trans
+        &trans  &kp F4  &kp F5  &kp F6  &kp F11      &trans    &trans  &trans  &trans  &trans
+&trans  &trans  &kp F7  &kp F8  &kp F9  &kp F12      &trans    &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &kp LCTRL    &kp LALT  &trans  &trans
             >;
 
             label = "FUN";
@@ -179,7 +162,7 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-          &trans      &trans      &out OUT_TOG    &trans      &trans    &trans  &trans  &trans  &trans  &trans
+          &to 0       &trans      &out OUT_TOG    &trans      &trans    &trans  &trans  &trans  &trans  &trans
           &bt BT_PRV  &bt BT_CLR  &bt BT_CLR_ALL  &bt BT_NXT  &trans    &trans  &trans  &trans  &trans  &trans
 &kp CAPS  &trans      &trans      &trans          &trans      &trans    &trans  &trans  &trans  &trans  &trans  &trans
                                   &trans          &trans      &trans    &trans  &trans  &trans
