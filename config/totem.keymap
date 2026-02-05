@@ -47,11 +47,30 @@
         combo_cfg {
             bindings = <&tog 4>;
             key-positions = <20 32>;
+            layers = <0 1 2>;
         };
 
         combo_fun {
             bindings = <&tog 3>;
             key-positions = <37 31>;
+            layers = <0 2 1>;
+        };
+
+        combo_fun_out {
+            bindings = <&tog 0>;
+            key-positions = <37 31>;
+            layers = <3>;
+        };
+
+        combo_cfg_out {
+            bindings = <&tog 4>;
+            key-positions = <20 32>;
+            layers = <4>;
+        };
+
+        combo_def {
+            bindings = <&to 0>;
+            key-positions = <20 31>;
         };
     };
 
