@@ -69,7 +69,7 @@
             &kp Q       &kp W        &kp E   &kp R    &kp T        &kp Y     &mt LEFT_BRACKET U  &kp I       &mt SEMI O  &kp P
             &mt APOS A  &mt MINUS S  &kp D   &kp F    &kp G        &kp H     &kp J               &kp K       &kp L       &kp RIGHT_BRACKET
 &kp LSHIFT  &kp Z       &kp X        &kp C   &kp V    &kp B        &kp N     &kp M               &kp COMMA   &kp DOT     &kp MINUS          &kp BACKSLASH
-                                     &tog 1  &kp TAB  &kp SPACE    &kp BSPC  &trans              &lt 2 LGUI
+                                     &tog 1  &kp TAB  &kp SPACE    &kp BSPC  &mo 2               &lt 3 LGUI
             >;
         };
 
@@ -144,10 +144,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &bt BT_NXT  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                &bt BT_CLR  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&bt BT_CLR_ALL  &bt BT_PRV  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                                    &trans  &trans  &trans    &trans  &trans  &trans
+          &trans      &trans      &trans          &trans      &trans    &trans  &trans  &trans  &trans  &trans
+          &bt BT_PRV  &bt BT_CLR  &bt BT_CLR_ALL  &bt BT_NXT  &trans    &trans  &trans  &trans  &trans  &trans
+&kp CAPS  &trans      &trans      &trans          &trans      &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                                  &trans          &trans      &trans    &trans  &trans  &trans
             >;
         };
 
