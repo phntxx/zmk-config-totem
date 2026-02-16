@@ -24,7 +24,6 @@
 
 &mt {
     quick-tap-ms = <100>;
-    global-quick-tap;
     flavor = "balanced";
 };
 
