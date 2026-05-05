@@ -9,10 +9,7 @@
 #define MOD  3
 #define ADJ  4
 
-&mt {
-    quick-tap-ms = <100>;
-    flavor = "balanced";
-};
+&mt { flavor = "balanced"; };
 
 / {
     combos {
@@ -28,6 +25,26 @@
             bindings = <&kp RET>;
             key-positions = <8 9>;
         };
+
+        combo_mo_cfg {
+            bindings = <&mo 4>;
+            key-positions = <34 20>;
+        };
+    };
+
+    macros {
+        alt_tab: alt_tab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kt LALT>,
+                <&macro_wait_time 50>,
+                <&kp TAB>,
+                <&macro_wait_time 50>,
+                <&kt LALT>;
+
+            label = "ALT_TAB";
+        };
     };
 
     keymap {
@@ -38,25 +55,25 @@
             &kp Q       &kp W        &kp E      &kp R      &kp T        &kp Y     &mt LEFT_BRACKET U  &kp I       &mt SEMI O  &kp P
             &mt APOS A  &mt MINUS S  &kp D      &kp F      &kp G        &kp H     &kp J               &kp K       &kp L       &kp RIGHT_BRACKET
 &kp LSHIFT  &kp Z       &kp X        &kp C      &kp V      &kp B        &kp N     &kp M               &kp COMMA   &kp DOT     &kp SLASH          &kp BACKSLASH
-                                     &kp LCTRL  &lt 1 TAB  &kp SPACE    &kp BSPC  &mt RALT LALT       &lt 2 LGUI
+                                     &kp LCTRL  &lt 1 TAB  &kp SPACE    &kp BSPC  &mo 3               &lt 2 LGUI
             >;
         };
 
         sym_layer {
             bindings = <
-            &kp N1     &kp N2     &kp N3                &kp N4     &kp N5    &kp N6   &kp N7      &kp N8      &kp N9      &kp N0
-            &kp GRAVE  &kp MINUS  &kp NON_US_BACKSLASH  &kp RA(L)  &trans    &trans   &kp RA(N7)  &kp RA(N8)  &kp RA(N9)  &kp EQUAL
-&kp LSHIFT  &trans     &trans     &trans                &kp V      &trans    &trans   &trans      &kp COMMA   &trans      &trans     &kp BACKSLASH
-                                  &trans                &none      &trans    &kp DEL  &trans      &kp LALT
+            &mt LS(N1) N1        &mt LS(N2) N2  &mt LS(N3) N3         &mt LS(N4) N4  &mt LS(N5) N5    &mt LS(N6) N6  &mt LS(N7) N7  &mt LS(N8) N8  &mt LS(N9) N9  &mt LS(N0) N0
+            &mt LS(GRAVE) GRAVE  &kp MINUS      &kp NON_US_BACKSLASH  &kp RA(L)      &trans           &trans         &kp RA(N7)     &kp RA(N8)     &kp RA(N9)     &kp EQUAL
+&kp LSHIFT  &trans               &trans         &trans                &trans         &trans           &kp RA(N)      &trans         &trans         &trans         &trans         &kp BACKSLASH
+                                                &kp LCTRL             &none          &trans           &kp DEL        &trans         &trans
             >;
         };
 
         crl_layer {
             bindings = <
-        &trans   &trans      &kp C_MUTE         &to 3         &to 4         &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp PRINTSCREEN
-        &kp TAB  &kp C_PREV  &kp C_VOLUME_DOWN  &kp C_VOL_UP  &kp C_NEXT    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans
-&trans  &trans   &trans      &kp INS            &kp LGUI      &trans        &trans    &trans     &trans     &trans     &trans           &kp K_LOCK
-                             &trans             &trans        &kp LALT      &trans    &trans     &none
+        &trans  &trans      &kp C_MUTE         &to 3         &to 4               &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp PRINTSCREEN
+        &trans  &kp C_PREV  &kp C_VOLUME_DOWN  &kp C_VOL_UP  &kp C_NEXT          &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans
+&trans  &trans  &kp DELETE  &trans             &kp INS       &trans              &trans    &trans     &trans     &trans     &trans           &kp K_LOCK
+                            &kp LCTRL          &kp LEFT_GUI  &kp K_PLAY_PAUSE    &trans    &trans     &none
             >;
         };
 
@@ -71,10 +88,10 @@
 
         cfg_layer {
             bindings = <
-       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans
-       &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans
-&to 0  &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                                   &trans        &trans        &bt BT_CLR      &trans  &trans  &trans
+       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans
+       &trans        &trans        &bt BT_CLR      &trans        &trans          &trans  &trans  &trans  &trans  &trans
+&none  &trans        &trans        &trans          &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                   &bt BT_CLR_ALL  &trans        &none           &trans  &trans  &trans
             >;
         };
 
