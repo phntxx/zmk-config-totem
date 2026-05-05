@@ -48,15 +48,24 @@
         };
     };
 
+    behaviors {
+        shift_caps: shift_caps {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFT_CAPS";
+            #binding-cells = <0>;
+            bindings = <&kp LSHIFT>, <&kp CAPSLOCK>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         base_layer {
             bindings = <
-            &kp Q       &kp W        &kp E      &kp R      &kp T        &kp Y     &mt LEFT_BRACKET U  &kp I       &mt SEMI O  &kp P
-            &mt APOS A  &mt MINUS S  &kp D      &kp F      &kp G        &kp H     &kp J               &kp K       &kp L       &kp RIGHT_BRACKET
-&kp LSHIFT  &kp Z       &kp X        &kp C      &kp V      &kp B        &kp N     &kp M               &kp COMMA   &kp DOT     &kp SLASH          &kp BACKSLASH
-                                     &kp LCTRL  &lt 1 TAB  &kp SPACE    &kp BSPC  &mo 3               &lt 2 LGUI
+             &kp Q       &kp W        &kp E      &kp R      &kp T        &kp Y     &mt LEFT_BRACKET U  &kp I       &mt SEMI O  &kp P
+             &mt APOS A  &mt MINUS S  &kp D      &kp F      &kp G        &kp H     &kp J               &kp K       &kp L       &kp RIGHT_BRACKET
+&shift_caps  &kp Z       &kp X        &kp C      &kp V      &kp B        &kp N     &kp M               &kp COMMA   &kp DOT     &kp SLASH          &kp BACKSLASH
+                                      &kp LCTRL  &lt 1 TAB  &kp SPACE    &kp BSPC  &mo 3               &lt 2 LGUI
             >;
         };
 
